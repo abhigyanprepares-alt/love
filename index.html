@@ -14,13 +14,13 @@
 </head>
 <body>
 
-  <!-- Floating Purple Stardust & Fireflies Canvas -->
+  <!-- Floating Purple Stardust Canvas -->
   <canvas id="stars-canvas"></canvas>
 
-  <!-- Interactive Purple Butterfly & Sparkle Trail Canvas -->
+  <!-- Interactive Sparkle & Butterfly Trail Canvas -->
   <canvas id="trail-canvas"></canvas>
 
-  <!-- Audio Toggle (Plays peaceful soft piano chimes) -->
+  <!-- Audio Toggle -->
   <button id="music-btn" class="floating-music-btn" aria-label="Play Soft Chimes">
     <span class="music-icon">✨</span>
     <span class="music-text">Play Melody 💜</span>
@@ -28,7 +28,7 @@
 
   <main class="app-wrapper">
 
-    <!-- 1. HERO SECTION: 1-Year Anniversary & Connected Heart -->
+    <!-- 1. HERO SECTION -->
     <section class="screen-box hero-box">
       <div class="purple-orb-glow"></div>
       
@@ -38,7 +38,6 @@
         One whole year since you commented on that Nepal Gen Z video and changed my life forever. I made this whole place just for you.
       </p>
 
-      <!-- Animated Long-Distance Pulse Orbit -->
       <div class="orbital-box">
         <div class="purple-ring ring-1"></div>
         <div class="purple-ring ring-2"></div>
@@ -62,7 +61,7 @@
       </div>
     </section>
 
-    <!-- 2. ANIMATION: INDIA <-> NEPAL VIDEO CALL RADAR -->
+    <!-- 2. CALL RADAR -->
     <section class="screen-box">
       <span class="section-label">Miles Apart, Hearts Together</span>
       <h2 class="section-title">Our Endless Video Calls 📱</h2>
@@ -89,50 +88,37 @@
       <p class="call-timer-caption" id="call-status">Status: Always thinking of you 💜</p>
     </section>
 
-    <!-- 3. LIVE 365-DAY ANNIVERSARY STOPWATCH -->
-    <section class="screen-box">
-      <span class="section-label">Since September 9, 2025</span>
-      <h2 class="section-title">Every Single Second With You ⏳</h2>
-      <p class="section-text">From strangers on social media to the most important person in my life:</p>
-      <p class="sweet-caption">Remember when you blocked me for 3 weeks because you were scared? I'm so glad you came back.</p>
-    </section>
-
-    <!-- 4. INTERACTIVE STORYBOOK: OUR MEMORIES IN JULY 2026 -->
+    <!-- 3. OUR MEMORIES IN JULY 2026 -->
     <section class="screen-box">
       <span class="section-label">Our First Time Meeting</span>
       <h2 class="section-title">July 2026 - Best Days of My Life ✨</h2>
       <p class="section-text">Tap each chapter to remember the magic:</p>
 
       <div class="story-timeline">
-        <!-- Memory 1 -->
         <div class="story-card glass-card" onclick="tapStory(this)">
           <div class="story-badge">Day 1</div>
           <h3>Dhamaal 4 & First Hugs 🎬</h3>
           <p>Seeing you in person for the very first time felt like a dream. We watched Dhamaal 4, laughed together, and I finally got to hold you.</p>
         </div>
 
-        <!-- Memory 2 -->
         <div class="story-card glass-card" onclick="tapStory(this)">
           <div class="story-badge">Day 2</div>
           <h3>Devchuli Trek, Leeches & Piro Chow Chow 🍜</h3>
           <p>Leeches all over our legs on Devchuli trek! But eating boiled eggs with spicy chow chow and laughing through the pain made it unforgettable.</p>
         </div>
 
-        <!-- Memory 3 -->
         <div class="story-card glass-card" onclick="tapStory(this)">
           <div class="story-badge">Day 2 Evening</div>
           <h3>The Lost Purse Drama 👛</h3>
           <p>Coming back to the hotel and realizing you lost your purse with all my money in it! We panicked, but we handled it together like a team.</p>
         </div>
 
-        <!-- Memory 4 -->
         <div class="story-card glass-card" onclick="tapStory(this)">
           <div class="story-badge">Day 3</div>
           <h3>Quiet Home & Midnight Walks 🌙</h3>
           <p>Just staying inside, talking about life, and walking together under the night sky holding hands in the peaceful dark.</p>
         </div>
 
-        <!-- Memory 5 -->
         <div class="story-card glass-card" onclick="tapStory(this)">
           <div class="story-badge">Day 4</div>
           <h3>CG Temple & Unnati Village 🛕</h3>
@@ -141,7 +127,7 @@
       </div>
     </section>
 
-    <!-- 5. THE PAPER ROSE THAT RAIN CAN NEVER DESTROY -->
+    <!-- 4. THE PAPER ROSE -->
     <section class="screen-box">
       <span class="section-label">My Heart Forever</span>
       <h2 class="section-title">The Eternal Paper Rose 🌹</h2>
@@ -159,43 +145,52 @@
       <p class="rose-instruction" id="rose-status">Tap the rose to make it bloom forever 💜</p>
     </section>
 
-    <!-- 6. PHOTO MEMORIES (SEXY KISSES & ADVENTURES) -->
+    <!-- 5. POLAROID GALLERY -->
     <section class="screen-box">
       <span class="section-label">Captured In Time</span>
       <h2 class="section-title">Our Favorite Moments 📸</h2>
       <p class="section-text">Tap any frame to illuminate our favorite memories:</p>
 
       <div class="polaroid-gallery">
-        <!-- Photo Frame 1 -->
         <div class="photo-frame glass-card" onclick="glowFrame(this)">
           <div class="frame-img-slot">
-            <!-- Put your photo file here: <img src="kiss.jpg" alt="Us" /> -->
-            <img src="/us kissing.jpg" alt="Our Kiss" style="width: 100%; height: 50%%; object-fit: fill; object-position: top" />
+            <img src="us%20kissing.jpg" alt="Our Kiss" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" />
+            <div class="photo-placeholder" style="display:none;">
+              <span class="ph-icon">💋</span>
+              <p>Sexy Kiss Pictures</p>
+              <small>Narayanghat Side</small>
+            </div>
           </div>
           <span class="frame-caption">The sweetest kiss in the world</span>
         </div>
 
-        <!-- Photo Frame 2 -->
         <div class="photo-frame glass-card" onclick="glowFrame(this)">
           <div class="frame-img-slot">
-            <!-- Put your photo file here: <img src="cg-temple.jpg" alt="CG Temple" /> -->
-            <img src="/us cg.jpg" alt="CG Temple Date" style="width: 100%; height: 100%; object-fit: cover; " />
+            <img src="us%20cg.jpg" alt="CG Temple Date" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
+            <div class="photo-placeholder" style="display:none;">
+              <span class="ph-icon">🛕</span>
+              <p>CG Temple & Unnati</p>
+              <small>Unnati Village Date</small>
+            </div>
           </div>
           <span class="frame-caption">Walking beside you forever</span>
         </div>
 
-        <!-- Photo Frame 3 -->
         <div class="photo-frame glass-card" onclick="glowFrame(this)">
           <div class="frame-img-slot">
-            <!-- Put your photo file here: <img src="trek.jpg" alt="Devchuli" /> -->
-            <img src="/us devchuli.jpg" alt="Devchuli Trek" style="width: 100%; height: 100%; object-fit: cover;" />
+            <img src="us%20devchuli.jpg" alt="Devchuli Trek" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
+            <div class="photo-placeholder" style="display:none;">
+              <span class="ph-icon">⛰️</span>
+              <p>Devchuli Trekking</p>
+              <small>Leeches & Piro Chow Chow</small>
+            </div>
           </div>
           <span class="frame-caption">My toughest, bravest girl</span>
         </div>
       </div>
     </section>
 
-    <!-- 7. OUR VIDEO CALL REEL SECTION -->
+    <!-- 6. VIDEO CALL REEL -->
     <section class="screen-box">
       <span class="section-label">Video Memories</span>
       <h2 class="section-title">Our Little World on Screen 🎥</h2>
@@ -208,11 +203,6 @@
             <p>Mero Maya 💜</p>
             <small>Nepal • India</small>
           </div>
-          <!-- You can insert your real video with:
-          <video controls playsinline poster="preview.jpg">
-            <source src="our-video.mp4" type="video/mp4">
-          </video>
-          -->
           <div class="mock-video-content">
             <span class="facetime-hearts">💜</span>
             <p>"I miss you so much today... hurry up and call me back."</p>
@@ -221,7 +211,7 @@
       </div>
     </section>
 
-    <!-- 8. THE PURPLE LOVE JAR (SWEET REASONS) -->
+    <!-- 7. PURPLE LOVE JAR -->
     <section class="screen-box">
       <span class="section-label">When You Miss Me</span>
       <h2 class="section-title">The Jar of Love 🍯</h2>
@@ -240,7 +230,7 @@
       </div>
     </section>
 
-    <!-- 9. SCRATCH-OFF SECRET CARD -->
+    <!-- 8. SCRATCH CARD -->
     <section class="screen-box">
       <span class="section-label">Secret Message</span>
       <h2 class="section-title">Scratch For a Surprise 🎁</h2>
@@ -256,7 +246,7 @@
       </div>
     </section>
 
-    <!-- 10. VINTAGE PURPLE LETTER -->
+    <!-- 9. VINTAGE LETTER -->
     <section class="screen-box">
       <span class="section-label">Read When Alone</span>
       <h2 class="section-title">A Letter For You ✉️</h2>
@@ -282,7 +272,7 @@
       <p class="env-instruction" id="env-status">Tap the purple seal to open</p>
     </section>
 
-    <!-- 11. SEND A VIRTUAL TIGHT HUG -->
+    <!-- 10. HOLD-TO-HUG -->
     <section class="screen-box">
       <span class="section-label">Across The Border</span>
       <h2 class="section-title">Send Me a Tight Hug 🤗</h2>
@@ -301,11 +291,7 @@
       <p class="hug-label" id="hug-txt">Hold it down tight...</p>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="app-footer">
-      <p class="footer-title">From India to Nepal with All My Soul 💜</p>
-      <p class="footer-date">September 9, 2025 ➔ September 9, 2026 ➔ Always</p>
-    <!-- NEW 1: DUAL-FINGER BORDER TOUCH (TWO FINGERS AT ONCE) -->
+    <!-- 11. DUAL-FINGER BORDER TOUCH -->
     <section class="screen-box">
       <span class="section-label">Two-Finger Touch</span>
       <h2 class="section-title">Hold My Hand Across the Border ⚡</h2>
@@ -327,7 +313,7 @@
       <p class="bridge-hint" id="bridge-status">Hold both pads together...</p>
     </section>
 
-    <!-- NEW 2: CONSTELLATION LINKER (SEPTEMBER 9, 2025) -->
+    <!-- 12. CONSTELLATION LINKER -->
     <section class="screen-box">
       <span class="section-label">Connect the Dots</span>
       <h2 class="section-title">The Night We Met 🌌</h2>
@@ -341,7 +327,7 @@
       </div>
     </section>
 
-    <!-- NEW 3: PERFORATED TRAVEL TICKET TEAR -->
+    <!-- 13. TRAVEL TICKET TEAR -->
     <section class="screen-box">
       <span class="section-label">Our Next Trip</span>
       <h2 class="section-title">My Ticket Back to You 🎫</h2>
@@ -380,7 +366,8 @@
       </div>
       <p class="ticket-status" id="ticket-status">Swipe down on the right stub to tear</p>
     </section>
-    <!-- FUN 1: THE RUNAWAY "BLOCK ME" BUTTON -->
+
+    <!-- 14. RUNAWAY BLOCK BUTTON -->
     <section class="screen-box">
       <span class="section-label">The September 2025 Incident</span>
       <h2 class="section-title">Try to Block Me Again 😈</h2>
@@ -398,7 +385,7 @@
       </div>
     </section>
 
-    <!-- FUN 2: DEVCHULI LEECH FLICK MINI-GAME -->
+    <!-- 15. LEECH FLICK MINI-GAME -->
     <section class="screen-box">
       <span class="section-label">Devchuli Survival</span>
       <h2 class="section-title">Flick the Leeches Away! 🐛</h2>
@@ -430,7 +417,7 @@
       </div>
     </section>
 
-    <!-- FUN 3: THE "WHO LOVES WHO MORE" RIGGED BATTLE -->
+    <!-- 16. WHO LOVES WHO MORE -->
     <section class="screen-box">
       <span class="section-label">Official Argument Solver</span>
       <h2 class="section-title">Who Loves Who More? 🥊</h2>
@@ -450,7 +437,8 @@
         <p class="battle-verdict" id="battle-verdict"></p>
       </div>
     </section>
-    <!-- GAME 1: BIOMETRIC SCANNER -->
+
+    <!-- 17. BIOMETRIC SCANNER -->
     <section class="screen-box">
       <span class="section-label">Biometric Verification</span>
       <h2 class="section-title">Attitude & Love Scanner 🩻</h2>
@@ -479,7 +467,7 @@
       </div>
     </section>
 
-    <!-- GAME 2: VIDEO CALL DECISION WHEEL -->
+    <!-- 18. DECISION WHEEL (PRECISE SVG) -->
     <section class="screen-box">
       <span class="section-label">FaceTime Date Helper</span>
       <h2 class="section-title">Spin the Date Wheel 🎡</h2>
@@ -492,47 +480,32 @@
         <div class="roulette-wheel" id="roulette-wheel">
           <svg viewBox="0 0 220 220" class="wheel-svg">
             <defs>
-              <!-- Base 60° Wedge Centered at 12 o'clock -->
               <path id="wedge" d="M 110,110 L 57.5,19.1 A 105,105 0 0,1 162.5,19.1 Z" stroke="#c084fc" stroke-width="1.5" />
             </defs>
-
-            <!-- Slice 0: Eat Food -->
             <g transform="rotate(0 110 110)">
               <use href="#wedge" fill="#581c87" />
               <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Eat Food</text>
             </g>
-
-            <!-- Slice 1: Send Kiss -->
             <g transform="rotate(60 110 110)">
               <use href="#wedge" fill="#7e22ce" />
               <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Send Kiss</text>
             </g>
-
-            <!-- Slice 2: Sing Song -->
             <g transform="rotate(120 110 110)">
               <use href="#wedge" fill="#9333ea" />
               <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Sing Song</text>
             </g>
-
-            <!-- Slice 3: Make Face -->
             <g transform="rotate(180 110 110)">
               <use href="#wedge" fill="#581c87" />
               <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Make Face</text>
             </g>
-
-            <!-- Slice 4: Tell Secret -->
             <g transform="rotate(240 110 110)">
               <use href="#wedge" fill="#7e22ce" />
               <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Tell Secret</text>
             </g>
-
-            <!-- Slice 5: Movie Date -->
             <g transform="rotate(300 110 110)">
               <use href="#wedge" fill="#9333ea" />
               <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Movie Date</text>
             </g>
-
-            <!-- Center Purple Hub -->
             <circle cx="110" cy="110" r="18" fill="#240738" stroke="#fef08a" stroke-width="2" />
             <text x="110" y="115" text-anchor="middle" font-size="13">💜</text>
           </svg>
@@ -542,7 +515,7 @@
       </div>
     </section>
 
-    <!-- GAME 3: CATCH THE FLYING KISSES ARCADE -->
+    <!-- 19. CATCH FLYING KISSES ARCADE -->
     <section class="screen-box">
       <span class="section-label">Tap Reflex Game</span>
       <h2 class="section-title">Catch 8 Flying Kisses 💋</h2>
@@ -563,7 +536,8 @@
         </div>
       </div>
     </section>
-    <!-- LATE NIGHT SPICY DARES GAME -->
+
+    <!-- 20. MIDNIGHT SPICY DARES -->
     <section class="screen-box">
       <span class="section-label">Late Night Edition</span>
       <h2 class="section-title">Midnight FaceTime Dares 😈🔥</h2>
@@ -589,6 +563,11 @@
         <p class="dare-penalty-note">Refuse a dare? You owe 10 kisses on call immediately.</p>
       </div>
     </section>
+
+    <!-- CLEANLY CLOSED FOOTER -->
+    <footer class="app-footer">
+      <p class="footer-title">From India to Nepal with All My Soul 💜</p>
+      <p class="footer-date">September 9, 2025 ➔ September 9, 2026 ➔ Always</p>
     </footer>
 
   </main>

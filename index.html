@@ -3,213 +3,614 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>For My Universe, My Love</title>
+  <title>Mero Maya - Forever Yours 💜</title>
   
-  <!-- Romantic & Elegant Typography -->
+  <!-- Sweet & Cute Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@300;400;600;700;800&family=Cinzel:wght@600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Ambient Glow Particle Canvas -->
-  <canvas id="starfield-canvas"></canvas>
+  <!-- Floating Purple Stardust & Fireflies Canvas -->
+  <canvas id="stars-canvas"></canvas>
 
-  <!-- Interactive Tap Floating Hearts Canvas -->
-  <canvas id="touch-canvas"></canvas>
+  <!-- Interactive Purple Butterfly & Sparkle Trail Canvas -->
+  <canvas id="trail-canvas"></canvas>
 
-  <!-- Sound Toggle Button (Pure synthesized magical celestial chimes) -->
-  <button id="audio-toggle" class="glass-pill sound-btn" aria-label="Toggle Celestial Music">
+  <!-- Audio Toggle (Plays peaceful soft piano chimes) -->
+  <button id="music-btn" class="floating-music-btn" aria-label="Play Soft Chimes">
     <span class="music-icon">✨</span>
-    <span class="music-text">Ambient Chimes</span>
+    <span class="music-text">Play Melody 💜</span>
   </button>
 
-  <main class="mobile-container">
+  <main class="app-wrapper">
 
-    <!-- HERO SECTION: The Cosmic Blooming Heart -->
-    <section class="screen-section hero-section">
-      <div class="glow-orb hero-orb"></div>
+    <!-- 1. HERO SECTION: 1-Year Anniversary & Connected Heart -->
+    <section class="screen-box hero-box">
+      <div class="purple-orb-glow"></div>
       
-      <div class="hero-content">
-        <p class="poetic-subtitle fade-in">Written in the constellations</p>
-        <h1 class="hero-title shimmer-text">To The One Who Holds My Heart</h1>
-        <p class="hero-body">
-          In an infinite universe of billions of galaxies, my soul chose to navigate through the dark just to find your light.
-        </p>
-      </div>
+      <span class="cute-tag">September 9, 2025 ➔ Today & Forever</span>
+      <h1 class="hero-heading">Hey Sanu... 💜</h1>
+      <p class="hero-subtext">
+        One whole year since you commented on that Nepal Gen Z video and changed my life forever. I made this whole place just for you.
+      </p>
 
-      <!-- Orbital Blooming Heart Visual -->
-      <div class="bloom-wrapper">
-        <div class="orbital-ring ring-1"></div>
-        <div class="orbital-ring ring-2"></div>
-        <div class="orbital-ring ring-3"></div>
-        <div class="heart-core">
-          <svg class="beating-svg" viewBox="0 0 100 100">
-            <path d="M50 88 C20 60 5 40 5 25 A18 18 0 0 1 40 12 L50 22 L60 12 A18 18 0 0 1 95 25 C95 40 80 60 50 88 Z" fill="url(#ruby-gradient)"/>
+      <!-- Animated Long-Distance Pulse Orbit -->
+      <div class="orbital-box">
+        <div class="purple-ring ring-1"></div>
+        <div class="purple-ring ring-2"></div>
+        <div class="center-heart">
+          <svg viewBox="0 0 100 100" class="heart-svg">
+            <path d="M50 88 C20 60 5 40 5 25 A18 18 0 0 1 40 12 L50 22 L60 12 A18 18 0 0 1 95 25 C95 40 80 60 50 88 Z" fill="url(#purpleGrad)"/>
             <defs>
-              <linearGradient id="ruby-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#ff4b72" />
-                <stop offset="50%" stop-color="#ff1e56" />
-                <stop offset="100%" stop-color="#990033" />
+              <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#d8b4fe" />
+                <stop offset="50%" stop-color="#a855f7" />
+                <stop offset="100%" stop-color="#6b21a8" />
               </linearGradient>
             </defs>
           </svg>
         </div>
       </div>
 
-      <div class="scroll-cue">
-        <span>Scroll down into my heart</span>
-        <div class="chevron-pulse"></div>
+      <div class="scroll-indicator">
+        <span>Scroll down to remember everything</span>
+        <div class="down-arrow">↓</div>
       </div>
     </section>
 
-    <!-- SECTION 2: The Sacred Bloom on Scroll -->
-    <section class="screen-section scroll-bloom-section">
-      <div class="section-badge">Chapter I</div>
-      <h2 class="serif-heading">The Bloom of Us</h2>
-      <p class="section-desc">
-        Watch it unfurl as you glide down. Every millimeter represents how tenderly your presence made my barren world bloom into roses.
+    <!-- 2. ANIMATION: INDIA <-> NEPAL VIDEO CALL RADAR -->
+    <section class="screen-box">
+      <span class="section-label">Miles Apart, Hearts Together</span>
+      <h2 class="section-title">Our Endless Video Calls 📱</h2>
+      <p class="section-text">
+        Most of our relationship lives inside our phone screens. India to Nepal, late nights, falling asleep on call, waking up together.
       </p>
 
-      <!-- Scroll-Controlled Generative Flower Canvas -->
-      <div class="canvas-flower-box">
-        <canvas id="flower-scroll-canvas" width="340" height="340"></canvas>
-        <div class="flower-percentage-glow" id="bloom-percent">0% BLOOM</div>
-      </div>
-
-      <blockquote class="poetic-quote">
-        "You didn't just walk into my life; you blossomed in the quiet spaces of my chest, turning every silence into soft petals."
-      </blockquote>
-    </section>
-
-    <!-- SECTION 3: Live Love Stopwatch / Constellation Counter -->
-    <section class="screen-section time-section">
-      <div class="section-badge">Chapter II</div>
-      <h2 class="serif-heading">Seconds of Loving You</h2>
-      <p class="section-desc">Every moment since the universe gifted me you:</p>
-
-      <div class="time-counter-grid glass-card">
-        <div class="time-unit">
-          <span class="number" id="days-val">00</span>
-          <span class="label">Days</span>
+      <div class="distance-card glass-card">
+        <div class="call-node">
+          <span class="flag-icon">🇮🇳</span>
+          <span class="node-label">Me (India)</span>
         </div>
-        <div class="time-sep">:</div>
-        <div class="time-unit">
-          <span class="number" id="hours-val">00</span>
-          <span class="label">Hours</span>
+
+        <div class="connection-line">
+          <div class="signal-dot"></div>
+          <span class="distance-tag">Connected 24/7</span>
         </div>
-        <div class="time-sep">:</div>
-        <div class="time-unit">
-          <span class="number" id="mins-val">00</span>
-          <span class="label">Mins</span>
-        </div>
-        <div class="time-sep">:</div>
-        <div class="time-unit">
-          <span class="number" id="secs-val">00</span>
-          <span class="label">Secs</span>
+
+        <div class="call-node">
+          <span class="flag-icon">🇳🇵</span>
+          <span class="node-label">My Sanu (Nepal)</span>
         </div>
       </div>
-
-      <p class="counter-footer">...and with every breath, I love you more than the second before.</p>
+      <p class="call-timer-caption" id="call-status">Status: Always thinking of you 💜</p>
     </section>
 
-    <!-- SECTION 4: Interactive Reasons Why Cards (Swipe / Tap) -->
-    <section class="screen-section cards-section">
-      <div class="section-badge">Chapter III</div>
-      <h2 class="serif-heading">Fragments of You</h2>
-      <p class="section-desc">Tap each card to illuminate what words fail to contain:</p>
+    <!-- 3. LIVE 365-DAY ANNIVERSARY STOPWATCH -->
+    <section class="screen-box">
+      <span class="section-label">Since September 9, 2025</span>
+      <h2 class="section-title">Every Single Second With You ⏳</h2>
+      <p class="section-text">From strangers on social media to the most important person in my life:</p>
 
-      <div class="cards-stack">
-        <!-- Card 1 -->
-        <div class="love-card glass-card" onclick="flipCard(this)">
-          <div class="card-glow"></div>
-          <div class="card-inner">
-            <span class="card-tag">01 • Your Laughter</span>
-            <h3>The Sweetest Melody</h3>
-            <p>It sounds like summer rain on warm pavement, soothing every anxious storm I ever carried.</p>
-            <span class="tap-hint">Tap to feel ✨</span>
-          </div>
+      <div class="timer-box glass-card">
+        <div class="t-col">
+          <span class="t-num" id="d-val">365</span>
+          <span class="t-label">Days</span>
+        </div>
+        <div class="t-colon">:</div>
+        <div class="t-col">
+          <span class="t-num" id="h-val">00</span>
+          <span class="t-label">Hours</span>
+        </div>
+        <div class="t-colon">:</div>
+        <div class="t-col">
+          <span class="t-num" id="m-val">00</span>
+          <span class="t-label">Mins</span>
+        </div>
+        <div class="t-colon">:</div>
+        <div class="t-col">
+          <span class="t-num" id="s-val">00</span>
+          <span class="t-label">Secs</span>
+        </div>
+      </div>
+      <p class="sweet-caption">Remember when you blocked me for 3 weeks because you were scared? I'm so glad you came back.</p>
+    </section>
+
+    <!-- 4. INTERACTIVE STORYBOOK: OUR MEMORIES IN JULY 2026 -->
+    <section class="screen-box">
+      <span class="section-label">Our First Time Meeting</span>
+      <h2 class="section-title">July 2026 - Best Days of My Life ✨</h2>
+      <p class="section-text">Tap each chapter to remember the magic:</p>
+
+      <div class="story-timeline">
+        <!-- Memory 1 -->
+        <div class="story-card glass-card" onclick="tapStory(this)">
+          <div class="story-badge">Day 1</div>
+          <h3>Dhamaal 4 & First Hugs 🎬</h3>
+          <p>Seeing you in person for the very first time felt like a dream. We watched Dhamaal 4, laughed together, and I finally got to hold you.</p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="love-card glass-card" onclick="flipCard(this)">
-          <div class="card-glow"></div>
-          <div class="card-inner">
-            <span class="card-tag">02 • Your Eyes</span>
-            <h3>Twin Stars</h3>
-            <p>Whenever you look at me, the whole world falls into a gentle hush. In your gaze, I am home.</p>
-            <span class="tap-hint">Tap to feel ✨</span>
-          </div>
+        <!-- Memory 2 -->
+        <div class="story-card glass-card" onclick="tapStory(this)">
+          <div class="story-badge">Day 2</div>
+          <h3>Devchuli Trek, Leeches & Piro Chow Chow 🍜</h3>
+          <p>Leeches all over our legs on Devchuli trek! But eating boiled eggs with spicy chow chow and laughing through the pain made it unforgettable.</p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="love-card glass-card" onclick="flipCard(this)">
-          <div class="card-glow"></div>
-          <div class="card-inner">
-            <span class="card-tag">03 • Your Kindness</span>
-            <h3>Grace Personified</h3>
-            <p>The quiet warmth you bring to everyone around you is the most radiant beauty in this world.</p>
-            <span class="tap-hint">Tap to feel ✨</span>
+        <!-- Memory 3 -->
+        <div class="story-card glass-card" onclick="tapStory(this)">
+          <div class="story-badge">Day 2 Evening</div>
+          <h3>The Lost Purse Drama 👛</h3>
+          <p>Coming back to the hotel and realizing you lost your purse with all my money in it! We panicked, but we handled it together like a team.</p>
+        </div>
+
+        <!-- Memory 4 -->
+        <div class="story-card glass-card" onclick="tapStory(this)">
+          <div class="story-badge">Day 3</div>
+          <h3>Quiet Home & Midnight Walks 🌙</h3>
+          <p>Just staying inside, talking about life, and walking together under the night sky holding hands in the peaceful dark.</p>
+        </div>
+
+        <!-- Memory 5 -->
+        <div class="story-card glass-card" onclick="tapStory(this)">
+          <div class="story-badge">Day 4</div>
+          <h3>CG Temple & Unnati Village 🛕</h3>
+          <p>Our big date in Narayanghat! Exploring CG Temple, walking through Unnati Village, and taking those crazy, sexy kiss pictures we still blush at.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. THE PAPER ROSE THAT RAIN CAN NEVER DESTROY -->
+    <section class="screen-box">
+      <span class="section-label">My Heart Forever</span>
+      <h2 class="section-title">The Eternal Paper Rose 🌹</h2>
+      <p class="section-text">
+        That day you made me a paper rose as a goodbye gift... and the heavy rain destroyed it while I was heading home. I cried so much that day. But look at this one—<strong>no rain in the world can ever destroy this rose:</strong>
+      </p>
+
+      <div class="rose-interactive-box" onclick="reviveRose()">
+        <div class="rain-overlay" id="rain-particles"></div>
+        <div class="origami-rose" id="origami-rose">
+          <span class="rose-glyph">🥀</span>
+        </div>
+        <div class="rose-glow-circle"></div>
+      </div>
+      <p class="rose-instruction" id="rose-status">Tap the rose to make it bloom forever 💜</p>
+    </section>
+
+    <!-- 6. PHOTO MEMORIES (SEXY KISSES & ADVENTURES) -->
+    <section class="screen-box">
+      <span class="section-label">Captured In Time</span>
+      <h2 class="section-title">Our Favorite Moments 📸</h2>
+      <p class="section-text">Tap any frame to illuminate our favorite memories:</p>
+
+      <div class="polaroid-gallery">
+        <!-- Photo Frame 1 -->
+        <div class="photo-frame glass-card" onclick="glowFrame(this)">
+          <div class="frame-img-slot">
+            <!-- Put your photo file here: <img src="kiss.jpg" alt="Us" /> -->
+            <img src="/us kissing.jpg" alt="Our Kiss" style="width: 100%; height: 50%%; object-fit: fill; object-position: top" />
+          </div>
+          <span class="frame-caption">The sweetest kiss in the world</span>
+        </div>
+
+        <!-- Photo Frame 2 -->
+        <div class="photo-frame glass-card" onclick="glowFrame(this)">
+          <div class="frame-img-slot">
+            <!-- Put your photo file here: <img src="cg-temple.jpg" alt="CG Temple" /> -->
+            <img src="/us cg.jpg" alt="CG Temple Date" style="width: 100%; height: 100%; object-fit: cover; " />
+          </div>
+          <span class="frame-caption">Walking beside you forever</span>
+        </div>
+
+        <!-- Photo Frame 3 -->
+        <div class="photo-frame glass-card" onclick="glowFrame(this)">
+          <div class="frame-img-slot">
+            <!-- Put your photo file here: <img src="trek.jpg" alt="Devchuli" /> -->
+            <img src="/us devchuli.jpg" alt="Devchuli Trek" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <span class="frame-caption">My toughest, bravest girl</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. OUR VIDEO CALL REEL SECTION -->
+    <section class="screen-box">
+      <span class="section-label">Video Memories</span>
+      <h2 class="section-title">Our Little World on Screen 🎥</h2>
+      <p class="section-text">Where we spend hours talking, teasing, and falling asleep:</p>
+
+      <div class="video-container glass-card">
+        <div class="video-mockup">
+          <div class="live-badge">● In Love</div>
+          <div class="video-caller-info">
+            <p>Mero Maya 💜</p>
+            <small>Nepal • India</small>
+          </div>
+          <!-- You can insert your real video with:
+          <video controls playsinline poster="preview.jpg">
+            <source src="our-video.mp4" type="video/mp4">
+          </video>
+          -->
+          <div class="mock-video-content">
+            <span class="facetime-hearts">💜</span>
+            <p>"I miss you so much today... hurry up and call me back."</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 5: 3D Wax-Sealed Vintage Love Letter -->
-    <section class="screen-section letter-section">
-      <div class="section-badge">Chapter IV</div>
-      <h2 class="serif-heading">A Letter For Your Eyes Only</h2>
-      <p class="section-desc">Touch the ruby seal to break the lock and open my soul:</p>
+    <!-- 8. THE PURPLE LOVE JAR (SWEET REASONS) -->
+    <section class="screen-box">
+      <span class="section-label">When You Miss Me</span>
+      <h2 class="section-title">The Jar of Love 🍯</h2>
+      <p class="section-text">Tap the purple glowing jar to take out a note:</p>
 
-      <div class="envelope-envelope-container">
-        <div class="envelope-wrapper" id="envelope-wrapper" onclick="toggleEnvelope()">
-          <div class="envelope-flap" id="envelope-flap"></div>
-          <div class="envelope-wax-seal" id="wax-seal">
-            <span>❤️</span>
-          </div>
-          <div class="envelope-pocket"></div>
-          <div class="letter-paper" id="letter-paper">
-            <div class="letter-handwritten">
-              <p class="cursive-salutation">My Beautiful Darling,</p>
-              <p>
-                If I had a single flower for every time I thought of you, I could walk through an eternal garden forever.
-              </p>
-              <p>
-                You are not an accident of nature; you are poetry in motion. When you smile, the heaviest skies turn golden. Thank you for choosing my heart to stand beside yours.
-              </p>
-              <p class="cursive-signoff">Forever & Always Yours,<br>Your Love</p>
-            </div>
+      <div class="purple-jar-btn" onclick="popJarNote()">
+        <div class="jar-cork"></div>
+        <div class="jar-glass">
+          <span class="floating-jar-heart">💜</span>
+        </div>
+      </div>
+      <p class="jar-subtext">Tap to pull a reason 👆</p>
+
+      <div class="note-box glass-card" id="love-note-box">
+        <p id="note-msg">"I would hike Devchuli with 1,000 leeches again if it means holding your hand at the top."</p>
+      </div>
+    </section>
+
+    <!-- 9. SCRATCH-OFF SECRET CARD -->
+    <section class="screen-box">
+      <span class="section-label">Secret Message</span>
+      <h2 class="section-title">Scratch For a Surprise 🎁</h2>
+      <p class="section-text">Use your finger to scratch away the purple shimmer:</p>
+
+      <div class="scratch-wrap">
+        <div class="scratch-hidden-content">
+          <h3>💌 My Forever Promise:</h3>
+          <p>No distance between India and Nepal can ever change how deeply I love you. You are my home, Mero Maya.</p>
+          <span class="scratch-sign">Forever your boy 💜</span>
+        </div>
+        <canvas id="scratch-pad" width="300" height="180"></canvas>
+      </div>
+    </section>
+
+    <!-- 10. VINTAGE PURPLE LETTER -->
+    <section class="screen-box">
+      <span class="section-label">Read When Alone</span>
+      <h2 class="section-title">A Letter For You ✉️</h2>
+      <p class="section-text">Tap the wax seal to open:</p>
+
+      <div class="envelope-box" onclick="openEnvelope()">
+        <div class="env-wrapper" id="env-wrapper">
+          <div class="env-flap"></div>
+          <div class="env-seal">💜</div>
+          <div class="env-pocket"></div>
+          <div class="env-sheet" id="env-sheet">
+            <p class="env-salutation">My sweet Sanu,</p>
+            <p>
+              I still think about that day in July when I was heading back to India. The rain was pouring, your paper rose got ruined, and my chest felt so heavy like it was breaking.
+            </p>
+            <p>
+              I miss your smell, your voice without internet delays, and the way you look at me in person. Thank you for staying by my side through everything. Happy 1 year since we first met.
+            </p>
+            <p class="env-closing">Always completely yours,<br>Your Love 💜</p>
           </div>
         </div>
       </div>
-      <p class="letter-instruction" id="letter-status-text">Tap seal to open letter</p>
+      <p class="env-instruction" id="env-status">Tap the purple seal to open</p>
     </section>
 
-    <!-- SECTION 6: Hold to Pulse My Heart (Interactive Haptic Experience) -->
-    <section class="screen-section pulse-section">
-      <div class="section-badge">Final Promise</div>
-      <h2 class="serif-heading">Send Me Your Heartbeat</h2>
-      <p class="section-desc">Press and hold your finger on the orb below to charge my love across the distance:</p>
+    <!-- 11. SEND A VIRTUAL TIGHT HUG -->
+    <section class="screen-box">
+      <span class="section-label">Across The Border</span>
+      <h2 class="section-title">Send Me a Tight Hug 🤗</h2>
+      <p class="section-text">Press and hold your thumb down on the purple heart to send me a hug right now:</p>
 
-      <div class="interactive-touch-area">
-        <div class="pulse-ring-outer" id="pulse-outer"></div>
-        <div class="pulse-ring-middle" id="pulse-middle"></div>
-        <button class="pulse-touch-orb" id="heart-pulse-btn" aria-label="Hold to charge heart">
-          <span class="pulse-icon">🤍</span>
+      <div class="hug-zone">
+        <div class="hug-halo"></div>
+        <button class="hug-core-btn" id="hug-btn" aria-label="Hold to hug">
+          <span>💜</span>
         </button>
       </div>
 
-      <div class="pulse-progress-bar">
-        <div class="pulse-fill" id="pulse-fill"></div>
+      <div class="hug-gauge">
+        <div class="hug-gauge-fill" id="hug-fill"></div>
       </div>
-      <div class="pulse-message" id="pulse-message">Hold to transmit your touch...</div>
+      <p class="hug-label" id="hug-txt">Hold it down tight...</p>
     </section>
 
-    <footer class="romantic-footer">
-      <p class="eternal-text">✦ Built for You with Every Atom of My Love ✦</p>
-      <p class="sub-footer">Today, Tomorrow, and for All Our Lifetimes</p>
+    <!-- FOOTER -->
+    <footer class="app-footer">
+      <p class="footer-title">From India to Nepal with All My Soul 💜</p>
+      <p class="footer-date">September 9, 2025 ➔ September 9, 2026 ➔ Always</p>
+    <!-- NEW 1: DUAL-FINGER BORDER TOUCH (TWO FINGERS AT ONCE) -->
+    <section class="screen-box">
+      <span class="section-label">Two-Finger Touch</span>
+      <h2 class="section-title">Hold My Hand Across the Border ⚡</h2>
+      <p class="section-text">
+        Put one finger on India and one finger on Nepal at the exact same time:
+      </p>
+
+      <div class="border-bridge-area" id="bridge-zone">
+        <canvas id="bridge-canvas" width="320" height="180"></canvas>
+        <div class="bridge-pad pad-left" id="pad-india">
+          <span>🇮🇳</span>
+          <small>Your Boy</small>
+        </div>
+        <div class="bridge-pad pad-right" id="pad-nepal">
+          <span>🇳🇵</span>
+          <small>My Sanu</small>
+        </div>
+      </div>
+      <p class="bridge-hint" id="bridge-status">Hold both pads together...</p>
+    </section>
+
+    <!-- NEW 2: CONSTELLATION LINKER (SEPTEMBER 9, 2025) -->
+    <section class="screen-box">
+      <span class="section-label">Connect the Dots</span>
+      <h2 class="section-title">The Night We Met 🌌</h2>
+      <p class="section-text">
+        Drag your finger from star 1 to star 5 to light up the night of September 9:
+      </p>
+
+      <div class="constellation-box">
+        <canvas id="constellation-canvas" width="300" height="240"></canvas>
+        <div class="constellation-glow-text" id="constellation-msg">Connect the stars in order ✨</div>
+      </div>
+    </section>
+
+    <!-- NEW 3: PERFORATED TRAVEL TICKET TEAR -->
+    <section class="screen-box">
+      <span class="section-label">Our Next Trip</span>
+      <h2 class="section-title">My Ticket Back to You 🎫</h2>
+      <p class="section-text">
+        Swipe down firmly on the right side of the ticket to tear it open:
+      </p>
+
+      <div class="ticket-wrapper">
+        <div class="ticket-body">
+          <div class="ticket-header">
+            <span>BORDER EXPRESS • PASSENGER TICKET</span>
+            <span>SEPT 2026</span>
+          </div>
+          <div class="ticket-route">
+            <div class="route-point">
+              <strong>IND</strong>
+              <small>Me</small>
+            </div>
+            <div class="route-arrow">✈️ ➔</div>
+            <div class="route-point">
+              <strong>NPT</strong>
+              <small>Narayanghat</small>
+            </div>
+          </div>
+          <p class="ticket-note">"Next time I'm not letting you lose any purses, and no rain is ruining our roses."</p>
+        </div>
+
+        <div class="ticket-perforation"></div>
+
+        <div class="ticket-stub" id="ticket-stub">
+          <div class="stub-content">
+            <span>SEAT 01</span>
+            <strong>PULL ⬇️</strong>
+          </div>
+        </div>
+      </div>
+      <p class="ticket-status" id="ticket-status">Swipe down on the right stub to tear</p>
+    </section>
+    <!-- FUN 1: THE RUNAWAY "BLOCK ME" BUTTON -->
+    <section class="screen-box">
+      <span class="section-label">The September 2025 Incident</span>
+      <h2 class="section-title">Try to Block Me Again 😈</h2>
+      <p class="section-text">
+        Remember when you got scared and blocked me for 3 whole weeks? Go ahead, try tapping the block button right now:
+      </p>
+
+      <div class="block-game-box glass-card" id="block-arena">
+        <p class="arena-question">Do you want to block him again?</p>
+        <div class="arena-buttons">
+          <button class="arena-btn safe-btn" onclick="acceptLove()">No, Never! 💜</button>
+          <button class="arena-btn runaway-btn" id="runaway-btn">Yes, Block! 🚫</button>
+        </div>
+        <p class="block-result" id="block-result-text"></p>
+      </div>
+    </section>
+
+    <!-- FUN 2: DEVCHULI LEECH FLICK MINI-GAME -->
+    <section class="screen-box">
+      <span class="section-label">Devchuli Survival</span>
+      <h2 class="section-title">Flick the Leeches Away! 🐛</h2>
+      <p class="section-text">
+        Quick! Leeches are attacking our legs on the trek! Tap all 3 to flick them off so we can finally eat our piro chow chow and boiled eggs:
+      </p>
+
+      <div class="leech-game-box glass-card" id="leech-arena">
+        <div class="leech-counter" id="leech-count">Leeches Left: 3</div>
+        
+        <div class="leech-target" id="leech-1" onclick="flickLeech(this)">
+          <span class="leech-emoji">🪱</span>
+          <small>Ouch!</small>
+        </div>
+        <div class="leech-target" id="leech-2" onclick="flickLeech(this)">
+          <span class="leech-emoji">🪱</span>
+          <small>Off my leg!</small>
+        </div>
+        <div class="leech-target" id="leech-3" onclick="flickLeech(this)">
+          <span class="leech-emoji">🪱</span>
+          <small>Shoo!</small>
+        </div>
+
+        <div class="chow-reward" id="chow-reward">
+          <span class="reward-icon">🍜🥚</span>
+          <h4>You Saved Us!</h4>
+          <p>Now sit down, eat your spicy chow chow, and let me hold your hand.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUN 3: THE "WHO LOVES WHO MORE" RIGGED BATTLE -->
+    <section class="screen-box">
+      <span class="section-label">Official Argument Solver</span>
+      <h2 class="section-title">Who Loves Who More? 🥊</h2>
+      <p class="section-text">
+        You always try to argue that you love me more. Tap your button as fast as you can to prove it:
+      </p>
+
+      <div class="tap-battle-box glass-card">
+        <div class="battle-gauge">
+          <div class="battle-fill" id="battle-fill"></div>
+        </div>
+        
+        <button class="battle-tap-btn" id="battle-btn" onclick="tapBattle()">
+          Tap Fast! 👆 (<span id="tap-score">0</span>%)
+        </button>
+
+        <p class="battle-verdict" id="battle-verdict"></p>
+      </div>
+    </section>
+    <!-- GAME 1: BIOMETRIC SCANNER -->
+    <section class="screen-box">
+      <span class="section-label">Biometric Verification</span>
+      <h2 class="section-title">Attitude & Love Scanner 🩻</h2>
+      <p class="section-text">
+        Place and hold your thumb on the purple scanner to run an official mood diagnosis:
+      </p>
+
+      <div class="scanner-card glass-card">
+        <div class="scanner-pad" id="scanner-pad">
+          <div class="scanner-laser" id="scanner-laser"></div>
+          <svg class="fingerprint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2a10 10 0 0 0-8 4.5M12 2a10 10 0 0 1 8 4.5M12 6a6 6 0 0 0-6 6c0 3.5 1.5 6 3 8M12 6a6 6 0 0 1 6 6c0 2-.5 4.5-1.5 6.5M12 10a2 2 0 0 0-2 2c0 2.5 1 4.5 2 6M12 10a2 2 0 0 1 2 2c0 1.5-.5 3.5-1 5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="scan-bar">
+          <div class="scan-bar-progress" id="scan-progress"></div>
+        </div>
+        <p class="scan-status" id="scan-status">Hold thumb flat on pad...</p>
+
+        <div class="scan-results" id="scan-results">
+          <div class="scan-item"><span>Prettiest Girl in Nepal:</span> <strong>100%</strong></div>
+          <div class="scan-item"><span>Attitude / Drama Level:</span> <strong>99.9%</strong></div>
+          <div class="scan-item"><span>Craving Piro Chow Chow:</span> <strong>100%</strong></div>
+          <div class="scan-item"><span>Missing Her Boy in India:</span> <strong>OVERLOAD 💜</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME 2: VIDEO CALL DECISION WHEEL -->
+    <section class="screen-box">
+      <span class="section-label">FaceTime Date Helper</span>
+      <h2 class="section-title">Spin the Date Wheel 🎡</h2>
+      <p class="section-text">
+        Whenever we are on video call and you say *"I don't know, you decide"*, spin this:
+      </p>
+
+      <div class="wheel-section glass-card">
+        <div class="wheel-pointer">▼</div>
+        <div class="roulette-wheel" id="roulette-wheel">
+          <svg viewBox="0 0 220 220" class="wheel-svg">
+            <defs>
+              <!-- Base 60° Wedge Centered at 12 o'clock -->
+              <path id="wedge" d="M 110,110 L 57.5,19.1 A 105,105 0 0,1 162.5,19.1 Z" stroke="#c084fc" stroke-width="1.5" />
+            </defs>
+
+            <!-- Slice 0: Eat Food -->
+            <g transform="rotate(0 110 110)">
+              <use href="#wedge" fill="#581c87" />
+              <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Eat Food</text>
+            </g>
+
+            <!-- Slice 1: Send Kiss -->
+            <g transform="rotate(60 110 110)">
+              <use href="#wedge" fill="#7e22ce" />
+              <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Send Kiss</text>
+            </g>
+
+            <!-- Slice 2: Sing Song -->
+            <g transform="rotate(120 110 110)">
+              <use href="#wedge" fill="#9333ea" />
+              <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Sing Song</text>
+            </g>
+
+            <!-- Slice 3: Make Face -->
+            <g transform="rotate(180 110 110)">
+              <use href="#wedge" fill="#581c87" />
+              <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Make Face</text>
+            </g>
+
+            <!-- Slice 4: Tell Secret -->
+            <g transform="rotate(240 110 110)">
+              <use href="#wedge" fill="#7e22ce" />
+              <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Tell Secret</text>
+            </g>
+
+            <!-- Slice 5: Movie Date -->
+            <g transform="rotate(300 110 110)">
+              <use href="#wedge" fill="#9333ea" />
+              <text x="110" y="50" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="bold" font-family="Nunito">Movie Date</text>
+            </g>
+
+            <!-- Center Purple Hub -->
+            <circle cx="110" cy="110" r="18" fill="#240738" stroke="#fef08a" stroke-width="2" />
+            <text x="110" y="115" text-anchor="middle" font-size="13">💜</text>
+          </svg>
+        </div>
+        <button class="spin-btn" id="spin-btn" onclick="spinDateWheel()">Spin Wheel 💫</button>
+        <p class="wheel-result" id="wheel-result">Tap spin to choose our fate</p>
+      </div>
+    </section>
+
+    <!-- GAME 3: CATCH THE FLYING KISSES ARCADE -->
+    <section class="screen-box">
+      <span class="section-label">Tap Reflex Game</span>
+      <h2 class="section-title">Catch 8 Flying Kisses 💋</h2>
+      <p class="section-text">
+        Kisses flying from India across the border! Tap 8 of them before they float away:
+      </p>
+
+      <div class="arcade-card glass-card">
+        <div class="arcade-hud">
+          <span>Caught: <strong id="kiss-score">0</strong> / 8</span>
+          <button class="arcade-start-btn" id="start-kiss-btn" onclick="startKissArcade()">Start Game ▶</button>
+        </div>
+        <div class="arcade-field" id="arcade-field">
+          <p class="arcade-idle-text" id="arcade-idle">Press Start & get ready to tap!</p>
+        </div>
+        <div class="arcade-win-banner" id="arcade-win">
+          🎉 You caught all my love! Now send 8 kisses back on WhatsApp right now.
+        </div>
+      </div>
+    </section>
+    <!-- LATE NIGHT SPICY DARES GAME -->
+    <section class="screen-box">
+      <span class="section-label">Late Night Edition</span>
+      <h2 class="section-title">Midnight FaceTime Dares 😈🔥</h2>
+      <p class="section-text">
+        For when the clock hits midnight on video call. Draw a card—no skipping allowed:
+      </p>
+
+      <div class="dare-card-wrapper glass-card">
+        <div class="dare-counter">
+          <span>Card <strong id="dare-number">1</strong> of 10</span>
+        </div>
+
+        <div class="dare-display-box" id="dare-box">
+          <span class="dare-flame-icon">🔥</span>
+          <p class="dare-prompt-text" id="dare-text">
+            "Bite your lower lip and hold unbroken eye contact through the camera for 10 seconds without smiling."
+          </p>
+        </div>
+
+        <button class="draw-dare-btn" onclick="nextDare()">
+          Draw Next Dare 🎲
+        </button>
+        <p class="dare-penalty-note">Refuse a dare? You owe 10 kisses on call immediately.</p>
+      </div>
+    </section>
     </footer>
 
   </main>

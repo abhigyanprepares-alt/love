@@ -208,34 +208,6 @@ function makeCanvasCrisp(canvas) {
       clearInterval(tuneInterval);
     }
   });
-
-
-  /* --------------------------------------------------------------------------
-     4. LIVE ANNIVERSARY STOPWATCH (START: SEPTEMBER 9, 2025)
-     -------------------------------------------------------------------------- */
-  // September 9, 2025, 00:00:00 (Month index 8 = September)
-  const ANNIVERSARY_DATE = new Date(2025, 8, 9, 0, 0, 0);
-
-  function updateStopwatch() {
-    const now = new Date();
-    const diff = now - ANNIVERSARY_DATE;
-
-    if (diff > 0) {
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const mins = Math.floor((diff / (1000 * 60)) % 60);
-      const secs = Math.floor((diff / 1000) % 60);
-
-      document.getElementById('d-val').textContent = String(days).padStart(2, '0');
-      document.getElementById('h-val').textContent = String(hours).padStart(2, '0');
-      document.getElementById('m-val').textContent = String(mins).padStart(2, '0');
-      document.getElementById('s-val').textContent = String(secs).padStart(2, '0');
-    }
-  }
-  setInterval(updateStopwatch, 1000);
-  updateStopwatch();
-
-
   /* --------------------------------------------------------------------------
      5. MEMORY STORYBOARD TAP
      -------------------------------------------------------------------------- */

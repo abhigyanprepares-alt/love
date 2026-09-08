@@ -1,0 +1,680 @@
+/* ==========================================================================
+   ROMANTIC MASTERPIECE STYLESHEET
+   Mobile-First • Twilight Obsidian & Rose Gold Aesthetic
+   ========================================================================== */
+
+:root {
+  --bg-deep: #0a040b;
+  --bg-velvet: #130713;
+  --rose-glow: #ff3366;
+  --rose-crimson: #d9044b;
+  --blush-light: #ff758c;
+  --champagne-gold: #f8dfbe;
+  --text-pure: #ffffff;
+  --text-muted: #e2c2cf;
+  --glass-surface: rgba(35, 12, 28, 0.45);
+  --glass-border: rgba(255, 117, 140, 0.22);
+  --glass-highlight: rgba(255, 255, 255, 0.12);
+  --font-serif: 'Cinzel', serif;
+  --font-cursive: 'Great Vibes', cursive;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --bezier-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --bezier-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background: radial-gradient(circle at 50% 0%, #20081c 0%, var(--bg-deep) 65%, #050106 100%);
+  color: var(--text-pure);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Background Animated Canvases */
+#starfield-canvas, #touch-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#touch-canvas {
+  z-index: 999;
+}
+
+/* Container tuned specifically for Phone viewports */
+.mobile-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 20px 22px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+/* Floating Audio / Ambient Pill */
+.sound-btn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 1000;
+  background: rgba(20, 5, 18, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  padding: 8px 16px;
+  border-radius: 40px;
+  color: var(--champagne-gold);
+  font-size: 0.78rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(255, 51, 102, 0.2);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.sound-btn:active {
+  transform: scale(0.94);
+}
+
+.sound-btn.playing {
+  border-color: var(--blush-light);
+  box-shadow: 0 0 15px rgba(255, 117, 140, 0.45);
+}
+
+/* Section Shells */
+.screen-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 20px;
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), inset 0 1px 0 var(--glass-highlight);
+  border-radius: 24px;
+}
+
+.section-badge {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--champagne-gold);
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+
+.serif-heading {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 20px rgba(255, 117, 140, 0.3);
+}
+
+.section-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 90%;
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+/* HERO SECTION */
+.hero-section {
+  min-height: 92vh;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.hero-orb {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(255, 51, 102, 0.35) 0%, rgba(217, 4, 75, 0.08) 50%, transparent 70%);
+  filter: blur(40px);
+  border-radius: 50%;
+  z-index: -1;
+  animation: floatOrb 8s ease-in-out infinite alternate;
+}
+
+.poetic-subtitle {
+  font-family: var(--font-cursive);
+  font-size: 2.1rem;
+  color: var(--champagne-gold);
+  margin-bottom: 6px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.shimmer-text {
+  background: linear-gradient(135deg, #ffffff 0%, #ffc0cb 50%, #f6dfbe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-body {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 320px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Blooming Orbital Mechanism */
+.bloom-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 38px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbital-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 117, 140, 0.4);
+  animation: spinRing 22s linear infinite;
+}
+
+.ring-1 {
+  width: 210px;
+  height: 210px;
+  border-color: rgba(248, 223, 190, 0.25);
+  animation-duration: 26s;
+}
+
+.ring-2 {
+  width: 170px;
+  height: 170px;
+  border-color: rgba(255, 51, 102, 0.4);
+  animation-direction: reverse;
+  animation-duration: 18s;
+}
+
+.ring-3 {
+  width: 130px;
+  height: 130px;
+  border-color: rgba(255, 255, 255, 0.25);
+  animation-duration: 12s;
+}
+
+.heart-core {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: heartbeat 2.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px rgba(255, 51, 102, 0.85));
+}
+
+.beating-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--champagne-gold);
+  opacity: 0.75;
+}
+
+.chevron-pulse {
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid var(--champagne-gold);
+  border-bottom: 2px solid var(--champagne-gold);
+  transform: rotate(45deg);
+  animation: bounceDown 1.8s infinite;
+}
+
+/* SECTION 2: Flower Canvas Bloom */
+.canvas-flower-box {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 10px auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#flower-scroll-canvas {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 25px rgba(255, 51, 102, 0.4));
+}
+
+.flower-percentage-glow {
+  position: absolute;
+  bottom: 8px;
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--champagne-gold);
+  background: rgba(15, 3, 14, 0.65);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 117, 140, 0.3);
+}
+
+.poetic-quote {
+  font-family: var(--font-cursive);
+  font-size: 1.6rem;
+  line-height: 1.45;
+  color: #ffe6ef;
+  padding: 10px 15px;
+  opacity: 0.95;
+}
+
+/* SECTION 3: Live Love Stopwatch */
+.time-counter-grid {
+  width: 100%;
+  padding: 24px 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-unit .number {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--champagne-gold);
+  text-shadow: 0 0 16px rgba(248, 223, 190, 0.5);
+}
+
+.time-unit .label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.time-sep {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--rose-glow);
+  opacity: 0.6;
+  padding-bottom: 12px;
+}
+
+.counter-footer {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 14px;
+}
+
+/* SECTION 4: Romantic Cards */
+.cards-stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.love-card {
+  position: relative;
+  padding: 22px 20px;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.4s var(--bezier-spring), border-color 0.3s;
+  cursor: pointer;
+}
+
+.love-card:active {
+  transform: scale(0.97);
+}
+
+.card-tag {
+  font-family: var(--font-serif);
+  font-size: 0.68rem;
+  letter-spacing: 1.8px;
+  color: var(--rose-glow);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.love-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.love-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.tap-hint {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.72rem;
+  color: var(--champagne-gold);
+  opacity: 0.7;
+}
+
+.card-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 51, 102, 0.4), transparent 70%);
+  filter: blur(20px);
+}
+
+/* SECTION 5: 3D Vintage Envelope & Unfolding Love Letter */
+.envelope-envelope-container {
+  width: 100%;
+  height: 310px;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.envelope-wrapper {
+  position: relative;
+  width: 300px;
+  height: 190px;
+  background: #2b0b1f;
+  border-radius: 12px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 51, 102, 0.2);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 110px solid #3c112d;
+  transform-origin: top;
+  transition: transform 0.6s 0.2s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.2s 0.3s;
+  z-index: 4;
+}
+
+.envelope-pocket {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid #24081a;
+  border-right: 150px solid #24081a;
+  border-bottom: 105px solid #1a0513;
+  border-top: 85px solid transparent;
+  border-radius: 0 0 12px 12px;
+  z-index: 3;
+}
+
+.envelope-wax-seal {
+  position: absolute;
+  top: 85px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: radial-gradient(circle, #ff2a5f, #8b0021);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(255, 42, 95, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  z-index: 5;
+  transition: transform 0.4s var(--bezier-spring), opacity 0.4s;
+}
+
+.letter-paper {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 276px;
+  height: 170px;
+  background: #faf4eb;
+  color: #311821;
+  border-radius: 8px;
+  padding: 16px 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  transition: transform 0.7s 0.4s cubic-bezier(0.2, 1, 0.3, 1), height 0.7s 0.4s;
+  overflow: hidden;
+}
+
+.letter-handwritten {
+  opacity: 0;
+  transition: opacity 0.5s 0.6s;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  font-family: var(--font-sans);
+}
+
+.cursive-salutation {
+  font-family: var(--font-cursive);
+  font-size: 1.45rem;
+  color: #a30e38;
+  margin-bottom: 6px;
+}
+
+.cursive-signoff {
+  font-family: var(--font-cursive);
+  font-size: 1.35rem;
+  color: #a30e38;
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* Open State for Envelope */
+.envelope-wrapper.is-open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope-wrapper.is-open .envelope-wax-seal {
+  transform: translate(-50%, -110px) scale(0);
+  opacity: 0;
+}
+
+.envelope-wrapper.is-open .letter-paper {
+  transform: translateY(-90px);
+  height: 275px;
+  z-index: 6;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+}
+
+.envelope-wrapper.is-open .letter-handwritten {
+  opacity: 1;
+}
+
+.letter-instruction {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--champagne-gold);
+  margin-top: 10px;
+}
+
+/* SECTION 6: Hold to Pulse Heart */
+.interactive-touch-area {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 10px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-touch-orb {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff527b, #c2003c);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  box-shadow: 0 0 30px rgba(255, 51, 102, 0.7);
+  outline: none;
+  cursor: pointer;
+  z-index: 3;
+  transition: transform 0.2s;
+}
+
+.pulse-ring-outer, .pulse-ring-middle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 117, 140, 0.35);
+  pointer-events: none;
+}
+
+.pulse-ring-outer {
+  width: 140px;
+  height: 140px;
+  animation: pulseRipple 2.6s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+.pulse-ring-middle {
+  width: 110px;
+  height: 110px;
+  animation: pulseRipple 2.6s cubic-bezier(0.2, 0.8, 0.4, 1) infinite 0.7s;
+}
+
+.pulse-progress-bar {
+  width: 220px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.pulse-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff4b72, var(--champagne-gold));
+  border-radius: 10px;
+  transition: width 0.1s linear;
+}
+
+.pulse-message {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+/* FOOTER */
+.romantic-footer {
+  text-align: center;
+  padding: 30px 0 20px;
+  border-top: 1px solid rgba(255, 117, 140, 0.15);
+}
+
+.eternal-text {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  color: var(--champagne-gold);
+  margin-bottom: 6px;
+}
+
+.sub-footer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* KEYFRAME ANIMATIONS */
+@keyframes spinRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.12); }
+  40% { transform: scale(0.97); }
+  60% { transform: scale(1.08); }
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(25px, 20px) scale(1.15); }
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0) rotate(45deg); opacity: 0.4; }
+  50% { transform: translateY(6px) rotate(45deg); opacity: 1; }
+}
+
+@keyframes pulseRipple {
+  0% { transform: scale(0.65); opacity: 0.9; }
+  100% { transform: scale(1.3); opacity: 0; }
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>For My Universe, My Love</title>
+  
+  <!-- Romantic & Elegant Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient Glow Particle Canvas -->
+  <canvas id="starfield-canvas"></canvas>
+
+  <!-- Interactive Tap Floating Hearts Canvas -->
+  <canvas id="touch-canvas"></canvas>
+
+  <!-- Sound Toggle Button (Pure synthesized magical celestial chimes) -->
+  <button id="audio-toggle" class="glass-pill sound-btn" aria-label="Toggle Celestial Music">
+    <span class="music-icon">✨</span>
+    <span class="music-text">Ambient Chimes</span>
+  </button>
+
+  <main class="mobile-container">
+
+    <!-- HERO SECTION: The Cosmic Blooming Heart -->
+    <section class="screen-section hero-section">
+      <div class="glow-orb hero-orb"></div>
+      
+      <div class="hero-content">
+        <p class="poetic-subtitle fade-in">Written in the constellations</p>
+        <h1 class="hero-title shimmer-text">To The One Who Holds My Heart</h1>
+        <p class="hero-body">
+          In an infinite universe of billions of galaxies, my soul chose to navigate through the dark just to find your light.
+        </p>
+      </div>
+
+      <!-- Orbital Blooming Heart Visual -->
+      <div class="bloom-wrapper">
+        <div class="orbital-ring ring-1"></div>
+        <div class="orbital-ring ring-2"></div>
+        <div class="orbital-ring ring-3"></div>
+        <div class="heart-core">
+          <svg class="beating-svg" viewBox="0 0 100 100">
+            <path d="M50 88 C20 60 5 40 5 25 A18 18 0 0 1 40 12 L50 22 L60 12 A18 18 0 0 1 95 25 C95 40 80 60 50 88 Z" fill="url(#ruby-gradient)"/>
+            <defs>
+              <linearGradient id="ruby-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff4b72" />
+                <stop offset="50%" stop-color="#ff1e56" />
+                <stop offset="100%" stop-color="#990033" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <div class="scroll-cue">
+        <span>Scroll down into my heart</span>
+        <div class="chevron-pulse"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: The Sacred Bloom on Scroll -->
+    <section class="screen-section scroll-bloom-section">
+      <div class="section-badge">Chapter I</div>
+      <h2 class="serif-heading">The Bloom of Us</h2>
+      <p class="section-desc">
+        Watch it unfurl as you glide down. Every millimeter represents how tenderly your presence made my barren world bloom into roses.
+      </p>
+
+      <!-- Scroll-Controlled Generative Flower Canvas -->
+      <div class="canvas-flower-box">
+        <canvas id="flower-scroll-canvas" width="340" height="340"></canvas>
+        <div class="flower-percentage-glow" id="bloom-percent">0% BLOOM</div>
+      </div>
+
+      <blockquote class="poetic-quote">
+        "You didn't just walk into my life; you blossomed in the quiet spaces of my chest, turning every silence into soft petals."
+      </blockquote>
+    </section>
+
+    <!-- SECTION 3: Live Love Stopwatch / Constellation Counter -->
+    <section class="screen-section time-section">
+      <div class="section-badge">Chapter II</div>
+      <h2 class="serif-heading">Seconds of Loving You</h2>
+      <p class="section-desc">Every moment since the universe gifted me you:</p>
+
+      <div class="time-counter-grid glass-card">
+        <div class="time-unit">
+          <span class="number" id="days-val">00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="time-sep">:</div>
+        <div class="time-unit">
+          <span class="number" id="hours-val">00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="time-sep">:</div>
+        <div class="time-unit">
+          <span class="number" id="mins-val">00</span>
+          <span class="label">Mins</span>
+        </div>
+        <div class="time-sep">:</div>
+        <div class="time-unit">
+          <span class="number" id="secs-val">00</span>
+          <span class="label">Secs</span>
+        </div>
+      </div>
+
+      <p class="counter-footer">...and with every breath, I love you more than the second before.</p>
+    </section>
+
+    <!-- SECTION 4: Interactive Reasons Why Cards (Swipe / Tap) -->
+    <section class="screen-section cards-section">
+      <div class="section-badge">Chapter III</div>
+      <h2 class="serif-heading">Fragments of You</h2>
+      <p class="section-desc">Tap each card to illuminate what words fail to contain:</p>
+
+      <div class="cards-stack">
+        <!-- Card 1 -->
+        <div class="love-card glass-card" onclick="flipCard(this)">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <span class="card-tag">01 • Your Laughter</span>
+            <h3>The Sweetest Melody</h3>
+            <p>It sounds like summer rain on warm pavement, soothing every anxious storm I ever carried.</p>
+            <span class="tap-hint">Tap to feel ✨</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="love-card glass-card" onclick="flipCard(this)">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <span class="card-tag">02 • Your Eyes</span>
+            <h3>Twin Stars</h3>
+            <p>Whenever you look at me, the whole world falls into a gentle hush. In your gaze, I am home.</p>
+            <span class="tap-hint">Tap to feel ✨</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="love-card glass-card" onclick="flipCard(this)">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <span class="card-tag">03 • Your Kindness</span>
+            <h3>Grace Personified</h3>
+            <p>The quiet warmth you bring to everyone around you is the most radiant beauty in this world.</p>
+            <span class="tap-hint">Tap to feel ✨</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: 3D Wax-Sealed Vintage Love Letter -->
+    <section class="screen-section letter-section">
+      <div class="section-badge">Chapter IV</div>
+      <h2 class="serif-heading">A Letter For Your Eyes Only</h2>
+      <p class="section-desc">Touch the ruby seal to break the lock and open my soul:</p>
+
+      <div class="envelope-envelope-container">
+        <div class="envelope-wrapper" id="envelope-wrapper" onclick="toggleEnvelope()">
+          <div class="envelope-flap" id="envelope-flap"></div>
+          <div class="envelope-wax-seal" id="wax-seal">
+            <span>❤️</span>
+          </div>
+          <div class="envelope-pocket"></div>
+          <div class="letter-paper" id="letter-paper">
+            <div class="letter-handwritten">
+              <p class="cursive-salutation">My Beautiful Darling,</p>
+              <p>
+                If I had a single flower for every time I thought of you, I could walk through an eternal garden forever.
+              </p>
+              <p>
+                You are not an accident of nature; you are poetry in motion. When you smile, the heaviest skies turn golden. Thank you for choosing my heart to stand beside yours.
+              </p>
+              <p class="cursive-signoff">Forever & Always Yours,<br>Your Love</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="letter-instruction" id="letter-status-text">Tap seal to open letter</p>
+    </section>
+
+    <!-- SECTION 6: Hold to Pulse My Heart (Interactive Haptic Experience) -->
+    <section class="screen-section pulse-section">
+      <div class="section-badge">Final Promise</div>
+      <h2 class="serif-heading">Send Me Your Heartbeat</h2>
+      <p class="section-desc">Press and hold your finger on the orb below to charge my love across the distance:</p>
+
+      <div class="interactive-touch-area">
+        <div class="pulse-ring-outer" id="pulse-outer"></div>
+        <div class="pulse-ring-middle" id="pulse-middle"></div>
+        <button class="pulse-touch-orb" id="heart-pulse-btn" aria-label="Hold to charge heart">
+          <span class="pulse-icon">🤍</span>
+        </button>
+      </div>
+
+      <div class="pulse-progress-bar">
+        <div class="pulse-fill" id="pulse-fill"></div>
+      </div>
+      <div class="pulse-message" id="pulse-message">Hold to transmit your touch...</div>
+    </section>
+
+    <footer class="romantic-footer">
+      <p class="eternal-text">✦ Built for You with Every Atom of My Love ✦</p>
+      <p class="sub-footer">Today, Tomorrow, and for All Our Lifetimes</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -11,7 +11,16 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-
+// Add right near the top of script.js
+function makeCanvasCrisp(canvas) {
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  return ctx;
+}
   /* --------------------------------------------------------------------------
      1. FLOATING PURPLE STARDUST & GLOWING MOTHS
      -------------------------------------------------------------------------- */

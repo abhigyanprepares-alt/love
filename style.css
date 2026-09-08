@@ -1639,3 +1639,37 @@ html, body {
   font-style: italic;
   opacity: 0.8;
 }
+/* ==========================================================================
+   MOBILE VISUAL & RESPONSIVE FIX
+   ========================================================================== */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+.app-wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 16px 14px 60px;
+  box-sizing: border-box;
+}
+
+.glass-card, 
+.distance-card, 
+.story-card, 
+.ticket-wrapper,
+.scanner-card,
+.cassette-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.glass-card {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transform: translateZ(0);
+}
